@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: edu.msudenver.chat.group.GroupServiceTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.977 s - in edu.msudenver.chat.group.GroupServiceTest

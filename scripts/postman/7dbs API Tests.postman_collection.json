@@ -1,0 +1,595 @@
+{
+	"info": {
+		"_postman_id": "c631b4ab-59c7-4418-8bb6-933d109167f0",
+		"name": "Chat API Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22933820"
+	},
+	"item": [
+		{
+			"name": "Group",
+			"item": [
+				{
+					"name": "Create Group",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"groupName\": \"Dragons\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/chat/groups"
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Groups",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/chat/groups"
+					},
+					"response": []
+				},
+				{
+					"name": "Find One Group",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/chat/groups/:groupId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"chat",
+								"groups",
+								":groupId"
+							],
+							"variable": [
+								{
+									"key": "groupId",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Group",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"groupName\": \"Dragoons\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/chat/groups/:groupId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"chat",
+								"groups",
+								":groupId"
+							],
+							"variable": [
+								{
+									"key": "groupId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Group",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/chat/groups/:groupId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"chat",
+								"groups",
+								":groupId"
+							],
+							"variable": [
+								{
+									"key": "groupId",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Group Member",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"playerId\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/chat/groups/:groupId/members",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"chat",
+								"groups",
+								":groupId",
+								"members"
+							],
+							"variable": [
+								{
+									"key": "groupId",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Group Members",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"groupName\": \"LetsTalkNow\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/chat/groups/:groupId/members",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"chat",
+								"groups",
+								":groupId",
+								"members"
+							],
+							"variable": [
+								{
+									"key": "groupId",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Group Member",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"groupName\": \"LetsTalkNow\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/chat/groups/:groupId/members/:playerId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"chat",
+								"groups",
+								":groupId",
+								"members",
+								":playerId"
+							],
+							"variable": [
+								{
+									"key": "groupId",
+									"value": "4"
+								},
+								{
+									"key": "playerId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Group Message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"message\" : \n    {\n        \"messageBody\": \"Second Group Message\",\n        \"senderId\": 1,\n        \"senderType\": \"PLAYER\",\n        \"messageType\":\"GROUP\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/chat/groups/:groupId/messages",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"chat",
+								"groups",
+								":groupId",
+								"messages"
+							],
+							"variable": [
+								{
+									"key": "groupId",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Group Mesage",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"groupName\": \"LetsTalkNow\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/chat/groups/:groupId/messages?epoch=195555555555",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"chat",
+								"groups",
+								":groupId",
+								"messages"
+							],
+							"query": [
+								{
+									"key": "epoch",
+									"value": "195555555555"
+								}
+							],
+							"variable": [
+								{
+									"key": "groupId",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trade",
+			"item": [
+				{
+					"name": "Create Trade",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"player1Id\": 1,\n    \"player2Id\": 2,\n    \"item1Id\":16,\n    \"item1Quantity\":1,\n    \"item2Id\":3,\n    \"item2Quantity\":3,\n    \"player1Approval\":true,\n    \"player2Approval\":false,\n    \"tradeStatus\":4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/chat/trades"
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Trades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/chat/trades"
+					},
+					"response": []
+				},
+				{
+					"name": "Find One Trade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/chat/trades/:tradeId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"chat",
+								"trades",
+								":tradeId"
+							],
+							"variable": [
+								{
+									"key": "tradeId",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Trade",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"item2Id\":2,\n    \"item2Quantity\":10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/chat/trades/:tradeId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"chat",
+								"trades",
+								":tradeId"
+							],
+							"variable": [
+								{
+									"key": "tradeId",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve Trade",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/chat/trades/:tradeId/:playerId?approval=true",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"chat",
+								"trades",
+								":tradeId",
+								":playerId"
+							],
+							"query": [
+								{
+									"key": "approval",
+									"value": "true"
+								}
+							],
+							"variable": [
+								{
+									"key": "tradeId",
+									"value": "9"
+								},
+								{
+									"key": "playerId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Private Messages",
+			"item": [
+				{
+					"name": "Create Private Message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\" : \r\n    {\r\n\r\n        \"messageBody\": \"Yo Raf, lets get a beer!\",\r\n        \"senderId\": 1,\r\n        \"senderType\": \"PLAYER\",\r\n        \"messageType\":\"PRIVATE\"\r\n    },\r\n    \"receiver_id\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/chat/private"
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Messages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/chat/private/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Area Messages",
+			"item": [
+				{
+					"name": "Create Area Message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"messageBody\": \"I am a tile area message again\",\r\n    \"senderId\": 1,\r\n    \"senderType\": \"PLAYER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/chat/area/:zoneId/:tileId?radius=3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"chat",
+								"area",
+								":zoneId",
+								":tileId"
+							],
+							"query": [
+								{
+									"key": "radius",
+									"value": "3"
+								}
+							],
+							"variable": [
+								{
+									"key": "zoneId",
+									"value": "1"
+								},
+								{
+									"key": "tileId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Zone Message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"messageBody\": \"I am a zone area message\",\r\n    \"senderId\": 1,\r\n    \"senderType\": \"PLAYER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/chat/area/:zoneId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"chat",
+								"area",
+								":zoneId"
+							],
+							"variable": [
+								{
+									"key": "zoneId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Area Messages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/chat/area"
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Player Area Messages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/chat/area/:playerId",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"chat",
+								"area",
+								":playerId"
+							],
+							"variable": [
+								{
+									"key": "playerId",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

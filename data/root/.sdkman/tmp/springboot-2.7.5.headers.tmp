@@ -1,0 +1,27 @@
+HTTP/1.1 302 Found
+Server: nginx/1.19.1
+Date: Mon, 31 Oct 2022 23:29:52 GMT
+Content-Length: 0
+Connection: keep-alive
+X-Sdkman-ArchiveType: zip
+location: https://repo.spring.io/simple/libs-release-local/org/springframework/boot/spring-boot-cli/2.7.5/spring-boot-cli-2.7.5-bin.zip
+
+HTTP/1.1 200 OK
+Date: Mon, 31 Oct 2022 23:29:53 GMT
+Content-Type: application/zip
+Content-Length: 14330346
+Connection: keep-alive
+X-JFrog-Version: Artifactory/7.41.7 74107900
+X-Artifactory-Id: 61d62fe9a66b67b272a7de149bf1a84517e82cc8
+X-Artifactory-Node-Id: springsource-artifactory-primary-0
+Last-Modified: Thu, 20 Oct 2022 13:13:36 GMT
+ETag: 1dbae5ea8565f8ae9143d61747a936269ca35bc1
+X-Checksum-Sha1: 1dbae5ea8565f8ae9143d61747a936269ca35bc1
+X-Checksum-Sha256: 047d938699889a4a805ae0b8303d186023fab1255668f6934ee7bd1fa83320c2
+X-Checksum-Md5: 23fcedbf1c0fe346629f2ba36aa6cd09
+Accept-Ranges: bytes
+X-Artifactory-Filename: spring-boot-cli-2.7.5-bin.zip
+Content-Disposition: attachment; filename="spring-boot-cli-2.7.5-bin.zip"; filename*=UTF-8''spring-boot-cli-2.7.5-bin.zip
+Strict-Transport-Security: max-age=15724800; includeSubDomains
+X-Request-ID: efe8dc22638e6da202cce198df5706a4
+

@@ -1,0 +1,12 @@
+/app/swdev/src/test/java/edu/msudenver/chat/group/GroupControllerTest.java
+/app/swdev/src/test/java/edu/msudenver/chat/trade/TradeServiceTest.java
+/app/swdev/src/test/java/edu/msudenver/chat/groupMember/GroupMemberServiceTest.java
+/app/swdev/src/test/java/edu/msudenver/chat/groupMessage/GroupMessageControllerTest.java
+/app/swdev/src/test/java/edu/msudenver/chat/group/GroupEntityTest.java
+/app/swdev/src/test/java/edu/msudenver/chat/privateMessage/PrivateMessageEntityTest.java
+/app/swdev/src/test/java/edu/msudenver/chat/trade/TradeEntityTest.java
+/app/swdev/src/test/java/edu/msudenver/chat/groupMember/GroupMemberControllerTest.java
+/app/swdev/src/test/java/edu/msudenver/chat/group/GroupServiceTest.java
+/app/swdev/src/test/java/edu/msudenver/chat/groupMessage/GroupMessageServiceTest.java
+/app/swdev/src/test/java/edu/msudenver/chat/message/MessageEntityTest.java
+/app/swdev/src/test/java/edu/msudenver/chat/trade/TradeControllerTest.java
